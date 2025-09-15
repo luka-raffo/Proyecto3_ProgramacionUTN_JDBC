@@ -46,6 +46,38 @@ public class DaoCategoria {
 		return filas;
 	}
 	
+public int borrarCategoria(int id) {
+		
+		int filas = 0;
+		
+		String query = "Delete FROM categorias WHERE IdCategoria = '" + id + "'";
+		
+		Connection cn = null;
+		
+		try
+		{
+			cn = DriverManager.getConnection(host+dbName,user,pass);
+			Statement st = cn.createStatement();
+			filas = st.executeUpdate(query);
+			System.out.println("correecto");
+			
+			
+
+			
+		
+		}catch(Exception e) {
+			
+			e.printStackTrace();
+		
+			System.out.println("no correcto");
+		
+		}
+		
+		
+		return filas;
+	}
+	
+	
 	public Categoria obtenerCategoria(int idCategoria) {
 		
 		Categoria cat = new Categoria();
