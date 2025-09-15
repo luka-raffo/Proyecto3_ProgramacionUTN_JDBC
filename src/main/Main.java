@@ -17,17 +17,39 @@ public class Main {
 		
 		DaoCategoria catDao = new DaoCategoria();
 		
-		Categoria cat = new Categoria();
+		Categoria cat1 = new Categoria("alimento");
+		Categoria cat2 = new Categoria("automovil");
+		Categoria cat3 = new Categoria("bebida");
+		Categoria cat4 = new Categoria("cosmeticos");
+		Categoria cat5 = new Categoria("carniceria");
+		Categoria cat6 = new Categoria("viviendas");
+		Categoria cat7 = new Categoria("alquileres");
+		Categoria cat8 = new Categoria("encendedores");
+		Categoria cat9 = new Categoria("llantas");
+		Categoria cat10 = new Categoria("musica");
+		
+
+		
+		
+		
+		catDao.agregarCategoria(cat1);
+		catDao.agregarCategoria(cat2);
+		catDao.agregarCategoria(cat3);
+		catDao.agregarCategoria(cat4);
+		catDao.agregarCategoria(cat5);
+		catDao.agregarCategoria(cat6);
+		catDao.agregarCategoria(cat7);
+		catDao.agregarCategoria(cat8);
+		catDao.agregarCategoria(cat9);
+		catDao.agregarCategoria(cat10);
+
 		
 		catDao.borrarCategoria(3);
-		
-		cat.setNombre("hola");
-		
-		catDao.agregarCategoria(cat);
+
 		
 		
-		cat = catDao.obtenerCategoria(1);
-		//System.out.println(cat.getNombre());
+		cat1 = catDao.obtenerCategoria(1);
+		System.out.println(cat1.getNombre());
 		
 		ArrayList<Categoria> lCategoria = catDao.obtenerTodasLasCat();
 		
@@ -37,13 +59,38 @@ public class Main {
 		
 		DaoProducto proDao = new DaoProducto();
 		
-		Producto prod = new Producto("1b2","coca-cola",100.00f,32,1);
-		Producto prodCopia = new Producto();
-		//proDao.agregarProducto(prod);
+		Producto prod1 = new Producto("1","pizza",100.00f,32,1);
+		Producto prod2 = new Producto("2","empanadas",100.00f,32,1);
+		Producto prod3 = new Producto("3","bife",100.00f,32,1);
+		Producto prod4 = new Producto("4","pancho",100.00f,32,1);
+		Producto prod5 = new Producto("5","hamburguesa",100.00f,32,1);
+		Producto prod6 = new Producto("6","vacio",100.00f,32,1);
+		Producto prod7 = new Producto("7","yogurt",100.00f,32,1);
+		Producto prod8 = new Producto("8","helado",100.00f,32,1);
+		Producto prod9 = new Producto("9","naranja",100.00f,32,1);
+		Producto prod10 = new Producto("10","manzama",100.00f,32,1);
 		
-		//prodCopia = proDao.obtenerProducto(prod.getCodigo());
-		/*
-		proDao.borrarProducto("1b2");
+		
+		proDao.agregarProducto(prod1);
+		proDao.agregarProducto(prod2);
+		proDao.agregarProducto(prod3);
+		proDao.agregarProducto(prod4);
+		proDao.agregarProducto(prod5);
+		proDao.agregarProducto(prod6);
+		proDao.agregarProducto(prod7);
+		proDao.agregarProducto(prod8);
+		proDao.agregarProducto(prod9);
+		
+		proDao.agregarProductoSP(prod10);;
+		
+		
+		proDao.borrarProducto("2");
+		
+		Producto prodCopia = new Producto();
+		
+		prodCopia = proDao.obtenerProducto(prod5.getCodigo());
+		System.out.println(prodCopia.toString());
+
 		
 		ArrayList<Producto> lProductos = proDao.obtenerTodosLosProd();
 		
@@ -51,7 +98,7 @@ public class Main {
 			
 			System.out.println(pro.toString());
 		}
-		*/
+		
 		
 		
 	}

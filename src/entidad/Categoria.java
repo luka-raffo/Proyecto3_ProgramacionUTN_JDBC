@@ -8,9 +8,9 @@ public class Categoria {
 		super();
 	}
 
-	public Categoria(int id, String nombre) {
+	public Categoria( String nombre) {
 		super();
-		this.id = id;
+		
 		this.nombre = nombre;
 	}
 

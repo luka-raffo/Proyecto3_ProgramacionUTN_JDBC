@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -156,7 +157,31 @@ public ArrayList <Producto>obtenerTodosLosProd(){
 	}
 	
 	
-	
+public void agregarProductoSP(Producto prod) {
+		Connection cn = null;
+		
+		try
+		{
+			cn = DriverManager.getConnection(host+dbName,user,pass);
+			CallableStatement cst = cn.prepareCall("Call sp_AgregarProducto(?,?,?,?,?)");
+			cst.setString(1, prod.getCodigo());
+			cst.setString(2, prod.getNombre());
+			cst.setFloat(3, prod.getPrecio());
+			cst.setInt(4, prod.getStock());
+			cst.setInt(5, prod.getIdCategoria());
+
+			cst.execute();
+		
+		}catch(Exception e) {
+			
+			e.printStackTrace();
+		
+			System.out.println("no correcto");
+		
+		}
+		
+		
+	}
 	
 	
 }
