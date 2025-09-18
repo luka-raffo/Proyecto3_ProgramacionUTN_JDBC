@@ -1,6 +1,5 @@
+package main;
 
-<<<<<<< HEAD
-=======
 import java.util.ArrayList;
 
 import dao.DaoCategoria;
@@ -95,4 +94,4 @@ public class Main {
 	}
 
 }
->>>>>>> 36a931f (fixing bugs)
+

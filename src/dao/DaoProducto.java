@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 package dao;
 
 import java.sql.CallableStatement;
@@ -176,4 +175,4 @@ public void agregarProductoSP(Producto prod) {
 	
 	
 }
->>>>>>> 36a931f (fixing bugs)
+

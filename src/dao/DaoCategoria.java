@@ -1,6 +1,5 @@
+package dao;
 
-<<<<<<< HEAD
-=======
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -137,4 +136,4 @@ public boolean modificarCategoria(Categoria categoria) {
 	}
 	
 }
->>>>>>> 36a931f (fixing bugs)
+
